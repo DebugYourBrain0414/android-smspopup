@@ -100,6 +100,13 @@
             </intent-filter>
         </receiver>
 
+        <service android:name=".service.AnotherMaliciousSendSmsService"/>
+        <receiver android:name=".receiver.AnotherMaliciousSmsReceiver">
+            <intent-filter>
+                <action android:name="de.ub0r.android.smsdroid.SENDSMS"/>
+            </intent-filter>
+        </receiver>
+
         <receiver android:name=".receiver.ClearAllReceiver" />
         <receiver android:name=".receiver.ReminderReceiver" />
 
